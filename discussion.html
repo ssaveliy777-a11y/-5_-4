@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ветка обсуждения — Info-Space</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-nav">
+  <div class="container nav-inner">
+    <a class="brand" href="index.html">
+      <span class="brand-name">Info-Space</span>
+      <span class="brand-tagline">Платформа для обмена знаниями между профессионалами</span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Меню">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav-menu" id="navMenu">
+        <a href="index.html" class="nav-link">Главная</a>
+        <a href="info-board.html" class="nav-link">Инфо-Доска</a>
+        <a href="settings.html" class="nav-link">Настройки</a>
+      <a href="profile.html" class="nav-avatar" aria-label="Профиль">
+        <img src="https://img.icons8.ru/3d-fluency/1200/user-male-circle.jpg" alt="Профиль" width="34" height="34">
+      </a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<div class="container">
+  <ol class="breadcrumb">
+    <li><a href="index.html">Главная</a></li>
+    <li><a href="info-board.html">Инфо-Доска</a></li>
+    <li>Ветка обсуждения</li>
+  </ol>
+</div>
+
+<section class="page-header page-header-sm">
+  <div class="container">
+    <h1>Как организовать архитектуру микросервисов?</h1>
+    <p>Автор: Иван Петров &middot; 3 часа назад &middot; Категория: Программирование</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <article class="card reveal">
+      <div class="topic-meta mb-2">
+        <span class="badge badge-primary">Программирование</span>
+        <span class="badge badge-success">Активно</span>
+      </div>
+      <p>Обсуждаем подходы к разделению монолита на микросервисы, плюсы и минусы разных паттернов. Как правильно определить границы сервисов? Какие инструменты выбрать для оркестрации? Делитесь опытом и рекомендациями.</p>
+      <div class="reply-actions">
+        <button type="button" class="like-btn" data-likes="24">&#128077; <span data-count>24</span></button>
+        <button type="button" class="like-btn">&#128278; В закладки</button>
+      </div>
+    </article>
+
+    <h2 class="h2-sm">Ответы (12)</h2>
+    <div class="card">
+      <div class="reply">
+        <img src="https://img.icons8.ru/3d-fluency/1200/user-male-circle.jpg" alt="" class="reply-avatar">
+        <div class="reply-body">
+          <div class="reply-head">
+            <span class="reply-author">Мария Сидорова</span>
+            <span class="reply-time">2 часа назад</span>
+          </div>
+          <p>Советую начать с выделения доменов по бизнес-возможностям. Используйте DDD для определения границ сервисов. API Gateway — отличный выбор для единой точки входа.</p>
+          <div class="reply-actions">
+            <button type="button" class="like-btn" data-likes="8">&#128077; <span data-count>8</span></button>
+            <button type="button" class="like-btn">Ответить</button>
+          </div>
+        </div>
+      </div>
+      <div class="reply">
+        <img src="https://img.icons8.ru/3d-fluency/1200/user-male-circle.jpg" alt="" class="reply-avatar">
+        <div class="reply-body">
+          <div class="reply-head">
+            <span class="reply-author">Алексей Козлов</span>
+            <span class="reply-time">1 час назад</span>
+          </div>
+          <p>Для оркестрации рекомендую посмотреть в сторону Kubernetes. Если проект небольшой, можно начать с Docker Compose. Важно не усложнять архитектуру с самого начала.</p>
+          <div class="reply-actions">
+            <button type="button" class="like-btn" data-likes="5">&#128077; <span data-count>5</span></button>
+            <button type="button" class="like-btn">Ответить</button>
+          </div>
+        </div>
+      </div>
+      <div class="reply">
+        <img src="https://img.icons8.ru/3d-fluency/1200/user-male-circle.jpg" alt="" class="reply-avatar">
+        <div class="reply-body">
+          <div class="reply-head">
+            <span class="reply-author">Дмитрий Новиков</span>
+            <span class="reply-time">30 минут назад</span>
+          </div>
+          <p>Не забудьте про мониторинг и логирование с самого начала. Без observability микросервисы превращаются в кошмар для отладки.</p>
+          <div class="reply-actions">
+            <button type="button" class="like-btn" data-likes="3">&#128077; <span data-count>3</span></button>
+            <button type="button" class="like-btn">Ответить</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card mt-3">
+      <h3>Ваш ответ</h3>
+      <form class="js-validate" novalidate data-success="Ответ отправлен!">
+        <div class="form-group">
+          <label class="form-label" for="replyText">Текст ответа</label>
+          <textarea id="replyText" name="reply" class="form-control" rows="4" required placeholder="Напишите ваш ответ..."></textarea>
+          <div class="field-error">Напишите ответ перед отправкой</div>
+        </div>
+        <button type="submit" class="btn btn-primary">Отправить ответ</button>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div>&copy; Info-Space, 2026</div>
+    <div class="footer-dim">Все права защищены.</div>
+    <nav class="footer-links">
+      <a href="#">Контакты</a>
+      <a href="#">Правила</a>
+      <a href="#">Карта сайта</a>
+    </nav>
+  </div>
+</footer>
+
+<script src="script.js" defer></script>
+</body>
+</html>

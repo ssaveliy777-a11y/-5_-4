@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Профиль — Info-Space</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-nav">
+  <div class="container nav-inner">
+    <a class="brand" href="index.html">
+      <span class="brand-name">Info-Space</span>
+      <span class="brand-tagline">Платформа для обмена знаниями между профессионалами</span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Меню">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav-menu" id="navMenu">
+        <a href="index.html" class="nav-link">Главная</a>
+        <a href="info-board.html" class="nav-link">Инфо-Доска</a>
+        <a href="settings.html" class="nav-link">Настройки</a>
+      <a href="profile.html" class="nav-avatar" aria-label="Профиль">
+        <img src="https://img.icons8.ru/3d-fluency/1200/user-male-circle.jpg" alt="Профиль" width="34" height="34">
+      </a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="page-header">
+  <div class="container">
+    <h1>Профиль</h1>
+    <p>Ваша страница на платформе</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="card reveal">
+      <div class="profile-head">
+        <img src="https://img.icons8.ru/3d-fluency/1200/user-male-circle.jpg" alt="Аватар" class="profile-avatar">
+        <div>
+          <h1 class="profile-name">Иван Петров</h1>
+          <div class="mb-2"><span class="badge badge-primary">Программирование</span> <span class="badge badge-success">Модератор</span></div>
+          <p class="text-muted">Разработчик с 8-летним опытом. Пишу о распределённых системах, архитектуре и DevOps-практиках.</p>
+          <div class="topic-meta">На платформе с 2024 года</div>
+        </div>
+        <a href="settings.html" class="btn btn-outline">Редактировать</a>
+      </div>
+    </div>
+
+    <div class="stats-grid">
+      <div class="stat-card"><div class="stat-value">24</div><div class="stat-label">Публикации</div></div>
+      <div class="stat-card"><div class="stat-value">156</div><div class="stat-label">Ответы</div></div>
+      <div class="stat-card"><div class="stat-value">4.8</div><div class="stat-label">Рейтинг</div></div>
+      <div class="stat-card"><div class="stat-value">41</div><div class="stat-label">Решённых вопросов</div></div>
+    </div>
+
+    <div class="card">
+      <div class="tabs">
+        <button type="button" class="tab-btn active" data-tab="pPub">Публикации</button>
+        <button type="button" class="tab-btn" data-tab="pAns">Ответы</button>
+        <button type="button" class="tab-btn" data-tab="pBook">Закладки</button>
+      </div>
+      <div id="pPub" class="tab-panel active">
+      <div class="mini-row">
+        <a href="discussion.html">Как организовать архитектуру микросервисов?</a>
+        <div class="topic-meta">3 часа назад &middot; 12 ответов</div>
+      </div>
+      <div class="mini-row">
+        <a href="discussion.html">Observability для микросервисов: с чего начать</a>
+        <div class="topic-meta">1 неделя назад &middot; 9 ответов</div>
+      </div>
+      <div class="mini-row">
+        <a href="discussion.html">Практика code review в больших командах</a>
+        <div class="topic-meta">2 недели назад &middot; 14 ответов</div>
+      </div>
+      </div>
+      <div id="pAns" class="tab-panel">
+      <div class="mini-row">
+        <a href="discussion.html">Ответ в теме «Kubernetes или Docker Compose?»</a>
+        <div class="topic-meta">1 час назад &middot; 5 лайков</div>
+      </div>
+      <div class="mini-row">
+        <a href="discussion.html">Ответ в теме «Мониторинг микросервисов»</a>
+        <div class="topic-meta">2 дня назад &middot; 3 лайка</div>
+      </div>
+      </div>
+      <div id="pBook" class="tab-panel">
+      <div class="mini-row">
+        <a href="discussion.html">Тренды UI/UX дизайна в 2026 году</a>
+        <div class="topic-meta">Дизайн &middot; Мария Сидорова</div>
+      </div>
+      <div class="mini-row">
+        <a href="discussion.html">Введение в машинное обучение для начинающих</a>
+        <div class="topic-meta">Программирование &middot; Елена Васильева</div>
+      </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div>&copy; Info-Space, 2026</div>
+    <div class="footer-dim">Все права защищены.</div>
+    <nav class="footer-links">
+      <a href="#">Контакты</a>
+      <a href="#">Правила</a>
+      <a href="#">Карта сайта</a>
+    </nav>
+  </div>
+</footer>
+
+<script src="script.js" defer></script>
+</body>
+</html>

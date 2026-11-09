@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Вход и Регистрация — Info-Space</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-nav">
+  <div class="container nav-inner">
+    <a class="brand" href="index.html">
+      <span class="brand-name">Info-Space</span>
+      <span class="brand-tagline">Платформа для обмена знаниями между профессионалами</span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Меню">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav-menu" id="navMenu">
+        <a href="index.html" class="nav-link">Главная</a>
+        <a href="info-board.html" class="nav-link">Инфо-Доска</a>
+        <a href="settings.html" class="nav-link">Настройки</a>
+      <a href="profile.html" class="nav-avatar" aria-label="Профиль">
+        <img src="https://img.icons8.ru/3d-fluency/1200/user-male-circle.jpg" alt="Профиль" width="34" height="34">
+      </a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="auth-section">
+  <div class="container auth-card">
+    <h1 class="auth-title">Добро пожаловать на Info-Space</h1>
+    <p class="text-muted text-center mb-3">Войдите или зарегистрируйтесь, чтобы присоединиться к сообществу</p>
+
+    <div class="card">
+      <div class="tabs">
+        <button type="button" class="tab-btn active" data-tab="loginTab">Вход</button>
+        <button type="button" class="tab-btn" data-tab="regTab">Регистрация</button>
+      </div>
+
+      <div id="loginTab" class="tab-panel active">
+        <form class="js-validate" novalidate data-success="Вход выполнен. Добро пожаловать!">
+          <div class="form-group">
+            <label class="form-label" for="loginEmail">Email</label>
+            <input id="loginEmail" name="email" type="email" class="form-control" required autocomplete="email">
+            <div class="field-error">Введите корректный email</div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="loginPassword">Пароль</label>
+            <div class="pw-wrap">
+              <input id="loginPassword" name="password" type="password" class="form-control" required minlength="6" autocomplete="current-password">
+              <button type="button" class="pw-toggle" data-toggle-password="#loginPassword">Показать</button>
+            </div>
+            <div class="field-error">Введите пароль (минимум 6 символов)</div>
+          </div>
+          <label class="form-check"><input type="checkbox" name="remember" checked> Запомнить меня</label>
+          <button type="submit" class="btn btn-primary btn-block">Войти</button>
+        </form>
+        <div class="auth-links">
+          <a href="#">Забыли пароль?</a>
+          <a href="admin.html">Админ-панель</a>
+        </div>
+      </div>
+
+      <div id="regTab" class="tab-panel">
+        <form class="js-validate" novalidate data-success="Аккаунт создан! Теперь можно войти.">
+          <div class="form-group">
+            <label class="form-label" for="regName">Имя</label>
+            <input id="regName" name="name" type="text" class="form-control" required autocomplete="name">
+            <div class="field-error">Введите имя</div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="regEmail">Email</label>
+            <input id="regEmail" name="email" type="email" class="form-control" required autocomplete="email">
+            <div class="field-error">Введите корректный email</div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="regPassword">Пароль</label>
+            <input id="regPassword" name="password" type="password" class="form-control" required minlength="6" autocomplete="new-password">
+            <div class="field-error">Пароль должен быть не короче 6 символов</div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="confirmPassword">Подтвердите пароль</label>
+            <input id="confirmPassword" name="confirm" type="password" class="form-control" required minlength="6" autocomplete="new-password">
+            <div class="field-error">Пароли не совпадают</div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="specialization">Специализация</label>
+            <select id="specialization" name="specialization" class="form-select" required>
+              <option value="">Выберите специализацию</option>
+              <option>Программирование</option>
+              <option>Дизайн</option>
+              <option>Маркетинг</option>
+              <option>Менеджмент</option>
+            </select>
+            <div class="field-error">Выберите специализацию</div>
+          </div>
+          <label class="form-check">
+            <input type="checkbox" name="rules" required> Согласен с правилами платформы
+          </label>
+          <div class="field-error">Нужно согласие с правилами</div>
+          <button type="submit" class="btn btn-primary btn-block">Зарегистрироваться</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div>&copy; Info-Space, 2026</div>
+    <div class="footer-dim">Все права защищены.</div>
+    <nav class="footer-links">
+      <a href="#">Контакты</a>
+      <a href="#">Правила</a>
+      <a href="#">Карта сайта</a>
+    </nav>
+  </div>
+</footer>
+
+<script src="script.js" defer></script>
+</body>
+</html>

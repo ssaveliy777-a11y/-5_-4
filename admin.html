@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Административная панель — Info-Space</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-nav">
+  <div class="container nav-inner">
+    <a class="brand" href="index.html">
+      <span class="brand-name">Info-Space</span>
+      <span class="brand-tagline">Платформа для обмена знаниями между профессионалами</span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Меню">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav-menu" id="navMenu">
+        <a href="index.html" class="nav-link">Главная</a>
+        <a href="info-board.html" class="nav-link">Инфо-Доска</a>
+        <a href="settings.html" class="nav-link">Настройки</a>
+      <a href="profile.html" class="nav-avatar" aria-label="Профиль">
+        <img src="https://img.icons8.ru/3d-fluency/1200/user-male-circle.jpg" alt="Профиль" width="34" height="34">
+      </a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="page-header">
+  <div class="container">
+    <h1>Административная панель</h1>
+    <p>Управление пользователями, контентом и настройками платформы</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-card reveal">
+        <div class="stat-label">Пользователи</div>
+        <div class="stat-value">3 482</div>
+        <div class="stat-note">+124 за неделю</div>
+      </div>
+      <div class="stat-card reveal">
+        <div class="stat-label">Публикации</div>
+        <div class="stat-value">1 927</div>
+        <div class="stat-note">+89 за неделю</div>
+      </div>
+      <div class="stat-card stat-warning reveal">
+        <div class="stat-label">Жалобы</div>
+        <div class="stat-value">7</div>
+        <div class="stat-note stat-note-warn">Требуют рассмотрения</div>
+      </div>
+      <div class="stat-card reveal">
+        <div class="stat-label">Ответы</div>
+        <div class="stat-value">8 564</div>
+        <div class="stat-note">+312 за неделю</div>
+      </div>
+    </div>
+
+    <div class="card mt-3">
+      <div class="tabs">
+        <button type="button" class="tab-btn active" data-tab="usersTab">Пользователи</button>
+        <button type="button" class="tab-btn" data-tab="contentTab">Контент</button>
+        <button type="button" class="tab-btn" data-tab="complaintsTab">Жалобы</button>
+        <button type="button" class="tab-btn" data-tab="categoriesTab">Категории</button>
+      </div>
+
+      <div id="usersTab" class="tab-panel active">
+<div class="panel-head">
+      <h3>Управление пользователями</h3>
+      <button type="button" class="btn btn-primary btn-sm">+ Добавить</button>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>ID</th><th>Имя</th><th>Email</th><th>Роль</th><th>Статус</th><th>Действия</th></tr></thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Иван Петров</td>
+            <td>ivan@example.com</td>
+            <td>Пользователь</td>
+            <td><span class="badge badge-success">Активен</span></td>
+            <td><div class="table-actions"><button type="button" class="btn btn-outline btn-sm">Изм.</button><button type="button" class="btn btn-danger btn-sm">Бан</button></div></td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Мария Сидорова</td>
+            <td>maria@example.com</td>
+            <td>Модератор</td>
+            <td><span class="badge badge-success">Активен</span></td>
+            <td><div class="table-actions"><button type="button" class="btn btn-outline btn-sm">Изм.</button><button type="button" class="btn btn-danger btn-sm">Бан</button></div></td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Алексей Козлов</td>
+            <td>alex@example.com</td>
+            <td>Пользователь</td>
+            <td><span class="badge badge-danger">Заблокирован</span></td>
+            <td><div class="table-actions"><button type="button" class="btn btn-outline btn-sm">Изм.</button><button type="button" class="btn btn-danger btn-sm">Разбан</button></div></td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>Дмитрий Новиков</td>
+            <td>dmitry@example.com</td>
+            <td>Администратор</td>
+            <td><span class="badge badge-success">Активен</span></td>
+            <td><div class="table-actions"><button type="button" class="btn btn-outline btn-sm">Изм.</button><button type="button" class="btn btn-danger btn-sm">Бан</button></div></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+      </div>
+
+      <div id="contentTab" class="tab-panel">
+<div class="panel-head">
+      <h3>Управление контентом</h3>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>ID</th><th>Заголовок</th><th>Автор</th><th>Дата</th><th>Статус</th><th>Действия</th></tr></thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Как организовать архитектуру микросервисов?</td>
+            <td>Иван Петров</td>
+            <td>05.10.2026</td>
+            <td><span class="badge badge-success">Опубликован</span></td>
+            <td><div class="table-actions"><button type="button" class="btn btn-outline btn-sm">Скрыть</button><button type="button" class="btn btn-danger btn-sm">Удалить</button></div></td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Тренды UI/UX дизайна в 2026 году</td>
+            <td>Мария Сидорова</td>
+            <td>05.10.2026</td>
+            <td><span class="badge badge-success">Опубликован</span></td>
+            <td><div class="table-actions"><button type="button" class="btn btn-outline btn-sm">Скрыть</button><button type="button" class="btn btn-danger btn-sm">Удалить</button></div></td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Стратегии контент-маркетинга для B2B</td>
+            <td>Алексей Козлов</td>
+            <td>04.10.2026</td>
+            <td><span class="badge badge-warning">На модерации</span></td>
+            <td><div class="table-actions"><button type="button" class="btn btn-outline btn-sm">Одобрить</button><button type="button" class="btn btn-danger btn-sm">Отклонить</button></div></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+      </div>
+
+      <div id="complaintsTab" class="tab-panel">
+<div class="panel-head">
+      <h3>Жалобы пользователей</h3>
+    </div>
+    <div class="complaint">
+      <h4>Жалоба на ответ в теме «Agile vs Waterfall»</h4>
+      <div class="topic-meta">2 часа назад &middot; Причина: спам в ответе</div>
+      <div class="topic-meta">От: Дмитрий Новиков &middot; На: пользователь Алексей Козлов</div>
+      <div class="complaint-actions">
+        <button type="button" class="btn btn-primary btn-sm">Принять</button>
+        <button type="button" class="btn btn-danger btn-sm">Отклонить</button>
+      </div>
+    </div>
+    <div class="complaint">
+      <h4>Жалоба на тему «Введение в машинное обучение»</h4>
+      <div class="topic-meta">5 часов назад &middot; Причина: некорректное содержание</div>
+      <div class="topic-meta">От: Мария Сидорова &middot; На: пользователь Елена Васильева</div>
+      <div class="complaint-actions">
+        <button type="button" class="btn btn-primary btn-sm">Принять</button>
+        <button type="button" class="btn btn-danger btn-sm">Отклонить</button>
+      </div>
+    </div>
+      </div>
+
+      <div id="categoriesTab" class="tab-panel">
+<div class="panel-head">
+      <h3>Категории</h3>
+      <button type="button" class="btn btn-primary btn-sm">+ Добавить</button>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>ID</th><th>Название</th><th>Кол-во тем</th><th>Действия</th></tr></thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Программирование</td>
+            <td>642</td>
+            <td><div class="table-actions"><button type="button" class="btn btn-outline btn-sm">Изм.</button><button type="button" class="btn btn-danger btn-sm">Удал.</button></div></td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Дизайн</td>
+            <td>318</td>
+            <td><div class="table-actions"><button type="button" class="btn btn-outline btn-sm">Изм.</button><button type="button" class="btn btn-danger btn-sm">Удал.</button></div></td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Маркетинг</td>
+            <td>274</td>
+            <td><div class="table-actions"><button type="button" class="btn btn-outline btn-sm">Изм.</button><button type="button" class="btn btn-danger btn-sm">Удал.</button></div></td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>Менеджмент</td>
+            <td>198</td>
+            <td><div class="table-actions"><button type="button" class="btn btn-outline btn-sm">Изм.</button><button type="button" class="btn btn-danger btn-sm">Удал.</button></div></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+      </div>
+    </div>
+
+    <p class="text-muted text-center mt-3">Текущее время: <span id="liveClock">--:--:--</span></p>
+  </div>
+</section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div>&copy; Info-Space, 2026</div>
+    <div class="footer-dim">Все права защищены.</div>
+    <nav class="footer-links">
+      <a href="#">Контакты</a>
+      <a href="#">Правила</a>
+      <a href="#">Карта сайта</a>
+    </nav>
+  </div>
+</footer>
+
+<script src="script.js" defer></script>
+</body>
+</html>

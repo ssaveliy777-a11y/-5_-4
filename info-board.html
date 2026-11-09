@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Инфо-Доска — Info-Space</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-nav">
+  <div class="container nav-inner">
+    <a class="brand" href="index.html">
+      <span class="brand-name">Info-Space</span>
+      <span class="brand-tagline">Платформа для обмена знаниями между профессионалами</span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Меню">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav-menu" id="navMenu">
+        <a href="index.html" class="nav-link">Главная</a>
+        <a href="info-board.html" class="nav-link active">Инфо-Доска</a>
+        <a href="settings.html" class="nav-link">Настройки</a>
+      <a href="profile.html" class="nav-avatar" aria-label="Профиль">
+        <img src="https://img.icons8.ru/3d-fluency/1200/user-male-circle.jpg" alt="Профиль" width="34" height="34">
+      </a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="page-header">
+  <div class="container">
+    <h1>Инфо-Доска</h1>
+    <p>Лента вопросов, статей и обсуждений от сообщества профессионалов</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="toolbar">
+      <div class="search-box">
+        <input type="search" id="searchInput" class="form-control" placeholder="Поиск по темам...">
+      </div>
+      <select id="categoryFilter" class="form-select" aria-label="Категория">
+        <option value="">Все категории</option>
+        <option value="Программирование">Программирование</option>
+        <option value="Дизайн">Дизайн</option>
+        <option value="Маркетинг">Маркетинг</option>
+        <option value="Менеджмент">Менеджмент</option>
+      </select>
+      <a href="#" class="btn btn-primary">+ Создать тему</a>
+    </div>
+
+    <div class="topics-list">
+      <article class="card card-hover searchable reveal" data-category="Программирование">
+        <div class="topic-head">
+          <h3><a href="discussion.html">Как организовать архитектуру микросервисов?</a></h3>
+          <span class="badge badge-primary">Программирование</span>
+        </div>
+        <p>Обсуждаем подходы к разделению монолита на микросервисы, плюсы и минусы разных паттернов.</p>
+        <div class="topic-meta">Автор: Иван Петров &middot; Ответов: 12 &middot; 3 часа назад</div>
+      </article>
+      <article class="card card-hover searchable reveal" data-category="Дизайн">
+        <div class="topic-head">
+          <h3><a href="discussion.html">Тренды UI/UX дизайна в 2026 году</a></h3>
+          <span class="badge badge-primary">Дизайн</span>
+        </div>
+        <p>Делимся наблюдениями о том, какие дизайнерские решения набирают популярность.</p>
+        <div class="topic-meta">Автор: Мария Сидорова &middot; Ответов: 8 &middot; 5 часов назад</div>
+      </article>
+      <article class="card card-hover searchable reveal" data-category="Маркетинг">
+        <div class="topic-head">
+          <h3><a href="discussion.html">Стратегии контент-маркетинга для B2B</a></h3>
+          <span class="badge badge-primary">Маркетинг</span>
+        </div>
+        <p>Какие форматы контента работают лучше всего в B2B-сегменте и как измерять их эффективность.</p>
+        <div class="topic-meta">Автор: Алексей Козлов &middot; Ответов: 5 &middot; 1 день назад</div>
+      </article>
+      <article class="card card-hover searchable reveal" data-category="Менеджмент">
+        <div class="topic-head">
+          <h3><a href="discussion.html">Agile vs Waterfall: что выбрать для проекта?</a></h3>
+          <span class="badge badge-primary">Менеджмент</span>
+        </div>
+        <p>Сравниваем методологии управления проектами и обсуждаем, в каких случаях каждая из них уместна.</p>
+        <div class="topic-meta">Автор: Дмитрий Новиков &middot; Ответов: 23 &middot; 2 дня назад</div>
+      </article>
+      <article class="card card-hover searchable reveal" data-category="Программирование">
+        <div class="topic-head">
+          <h3><a href="discussion.html">Введение в машинное обучение для начинающих</a></h3>
+          <span class="badge badge-primary">Программирование</span>
+        </div>
+        <p>Базовые понятия и термины машинного обучения, с чего начать изучение, рекомендуемые ресурсы.</p>
+        <div class="topic-meta">Автор: Елена Васильева &middot; Ответов: 17 &middot; 3 дня назад</div>
+      </article>
+    </div>
+
+    <p id="noResults" class="text-muted text-center mt-3" hidden>По вашему запросу ничего не найдено.</p>
+
+    <ul class="pagination">
+      <li><a href="#" aria-label="Назад">&larr; Назад</a></li>
+      <li><a href="#" class="active">1</a></li>
+      <li><a href="#">2</a></li>
+      <li><a href="#">3</a></li>
+      <li><a href="#">Вперёд &rarr;</a></li>
+    </ul>
+  </div>
+</section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div>&copy; Info-Space, 2026</div>
+    <div class="footer-dim">Все права защищены.</div>
+    <nav class="footer-links">
+      <a href="#">Контакты</a>
+      <a href="#">Правила</a>
+      <a href="#">Карта сайта</a>
+    </nav>
+  </div>
+</footer>
+
+<script src="script.js" defer></script>
+</body>
+</html>
